@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.zysps.chattingcc.MainActivity_cc">
+    <!--linearlayout-线性布局，将所包含的控件在线性方向上依次排列
+    这里通过orientation属性指定了排列方向是vertical，也可以是horizonal-->
+<!--id-给当前元素定义一个唯一标识符，之后再代码中对元素进行操作
+layout_width-指定元素宽度
+layout_height-指定元素高度
+android:text-指定元素中显示的文字内容
+match-parent-当前控件大小和父布局大小一样
+warp-parent-当前控件的大小能够刚好包含住里面的内容
+gravity-指定文字的对齐方式-top。bottom、left、right、center等
+textsize-指定文字的大小
+textcolor-指定文字的颜色-->
+
+    <ListView
+        android:divider="@null"
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"></ListView>
+    <!--先为listview指定一个id，然后设置宽度和高度-->
+    <!--这里使用了layout_weight属性，控件的宽度就不再有width决定，这里
+    weight属性的值决定如何平分屏幕宽度-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#898989" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!--<Button-->
+            <!--android:id="@+id/btn_left"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_margin="5dp"-->
+            <!--android:background="@drawable/btn_float"-->
+            <!--android:text="左边"-->
+            <!--android:textColor="#fff" />-->
+
+        <EditText
+            android:id="@+id/et_meg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+        <!--与用户交互，允许用户在控件里输入和编辑内容，并可以在程序中对这些内容进行处理。
+        场景可用于发短信、发微博、聊qq等等
+        拓展：
+        用Android：hint可以在输入框中显示一些提示性的文字，然后一旦用户输入了任何内容，提示文字就会消失
+        用maxlines来指定edittext的最大行数-->
+
+        <Button
+            android:id="@+id/btn_right"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/btn_float"
+            android:text="发送"
+            android:textColor="#fff" />
+        <!--buttton是程序用于和用户进行交互的一个重要控件
+        文字自动大写转换，可用textallcaps=“false”禁用这一默认特性-->
+
+    </LinearLayout>
+</LinearLayout>
